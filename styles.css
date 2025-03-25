@@ -1,0 +1,1242 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: poppins, sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Loader Styles */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.blinking-logo {
+    width: 150px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#loader-percentage {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #06402B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.slide-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content .btn {
+    background-color: #06402B;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.slide-content .btn:hover {
+    background-color: #2F4F2F;
+}
+
+/* Navigation Dots */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* Navigation Arrows */
+.arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 3;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #fff;
+}
+
+/* Features Section */
+.hero-features {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Standard spacing between features */
+}
+
+.hero-features p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.hero-features i {
+    color: #FFD700; /* Gold color for the check icon */
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide-content h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .slide-content p {
+        font-size: 1.2rem; /* Smaller paragraph for mobile */
+    }
+
+    .slide-content .btn {
+        padding: 10px 20px; /* Smaller button for mobile */
+        font-size: 0.9rem;
+    }
+
+    .dots {
+        bottom: 10px; /* Move dots up slightly */
+    }
+
+    .dot {
+        width: 8px; /* Smaller dots for mobile */
+        height: 8px;
+    }
+
+    .arrows {
+        padding: 0 10px; /* Reduce arrow padding for mobile */
+    }
+
+    .arrow {
+        font-size: 1.5rem; /* Smaller arrows for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-content h1 {
+        font-size: 1.5rem; /* Even smaller heading for very small screens */
+        font-weight: bold; /* Make heading text bolder */
+    }
+
+    .slide-content p {
+        font-size: 1.1rem; /* Increase paragraph text size */
+    }
+
+    .slide-content .btn {
+        padding: 8px 16px; /* Even smaller button for very small screens */
+        font-size: 0.9rem; /* Increase button text size */
+    }
+
+    .dots {
+        bottom: 5px; /* Move dots even higher */
+    }
+
+    .dot {
+        width: 6px; /* Even smaller dots for very small screens */
+        height: 6px;
+    }
+
+    .arrows {
+        padding: 0 5px; /* Reduce arrow padding further */
+    }
+
+    .arrow {
+        font-size: 1.2rem; /* Even smaller arrows for very small screens */
+    }
+}
+
+/* Vacation Section */
+.vacation {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.vacation h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Black font weight */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.vacation .tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.vacation-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vacation-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vacation-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vacation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.vacation-item:hover img {
+    transform: scale(1.1);
+}
+
+.vacation-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.vacation-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.vacation-details .safari-details {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.vacation-details .price {
+    font-size: 1.2rem;
+    color: #FFC107;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #06402B;
+}
+
+.circle-arrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circle-arrow span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.circle-arrow .fas {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover .circle-arrow .fas {
+    transform: translateX(5px);
+}
+
+/* Hidden Items */
+.vacation-item.hidden {
+    display: none;
+}
+
+/* Show More Button */
+.show-more {
+    margin-top: 40px;
+    padding: 12px 24px;
+    background-color: #04632B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.show-more:hover {
+    background-color: #06402B;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vacation h2 {
+        font-size: 2rem;
+    }
+
+    .vacation .tagline {
+        font-size: 1rem;
+    }
+
+    .vacation-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .vacation-details .safari-details {
+        font-size: 0.9rem;
+    }
+
+    .vacation-details .price {
+        font-size: 1rem;
+    }
+
+    .circle-arrow span {
+        font-size: 0.9rem;
+    }
+
+    .circle-arrow .fas {
+        font-size: 1.2rem;
+    }
+
+    .show-more {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vacation h2 {
+        font-size: 1.5rem;
+    }
+
+    .vacation .tagline {
+        font-size: 0.9rem;
+    }
+
+    .vacation-details h3 {
+        font-size: 1rem;
+    }
+
+    .vacation-details .safari-details {
+        font-size: 0.8rem;
+    }
+
+    .vacation-details .price {
+        font-size: 0.9rem;
+    }
+
+    .circle-arrow span {
+        font-size: 0.8rem;
+    }
+
+    .circle-arrow .fas {
+        font-size: 1rem;
+    }
+
+    .show-more {
+        font-size: 0.8rem;
+    }
+}
+
+/* Header Styles */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.sticky-header.solid {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height as needed */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat' sans-serif; /* Use Montserrat font for navigation links */
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-family:'Montserrat' sans-serif; /* Use Montserrat font for navigation links */
+}
+
+/* Light text for transparent mode */
+.sticky-header.transparent .nav-links a {
+    color: #fff;
+}
+
+/* Dark text for solid mode */
+.sticky-header.solid .nav-links a {
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #ff6f61; /* Highlight color on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f9f9f9;
+    color: #ff6f61;
+}
+
+/* Safari Request Button */
+.btn-outline-warning {
+    background-color: transparent;
+    border: 2px solid #FFC107;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+    background-color: #FFD700;
+    color: #fff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .icon {
+    font-size: 2rem; /* Increased size for better visibility on mobile screens */
+    color: #fff; /* Light color for transparent mode */
+    transition: color 0.3s ease;
+}
+
+.sticky-header.solid .hamburger .icon {
+    color: #333; /* Dark color for solid mode */
+}
+
+.hamburger .close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Fullscreen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.fullscreen-menu ul li {
+    margin: 20px 0;
+}
+
+.fullscreen-menu ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-menu ul li a:hover {
+    color: #FFC107;
+}
+
+.fullscreen-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.safari-request {
+    background-color: #FFC107;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.safari-request:hover {
+    background-color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .fullscreen-menu.active {
+        display: flex;
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .hamburger .open.active {
+        display: none;
+    }
+
+    .hamburger .close.active {
+        display: block;
+    }
+}
+
+/* All About Tanzania Section */
+.about-tanzania {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.about-tanzania h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #06402B;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-images {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center the images horizontally */
+}
+
+.about-images img {
+    width: calc(50% - 10px); /* Two images per row with a gap */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Best Way to Explore Tanzania Section */
+.explore-tanzania {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.explore-tanzania h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #06402B;
+    text-align: center;
+}
+
+.explore-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.explore-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.view-itineraries {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #06402B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-itineraries:hover {
+    background-color: #04632B;
+}
+
+.explore-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.explore-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .about-content,
+    .explore-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .explore-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* Why Choose Maasai Spear Safaris Section */
+.why-choose {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #06402B;
+}
+
+.why-choose .tagline {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.why-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.why-item {
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.why-item i {
+    font-size: 24px;
+    color: #06402B;
+    margin-bottom: 10px;
+}
+
+.why-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #06402B;
+}
+
+.why-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.why-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Dark Green Button */
+.btn-dark-green {
+    background-color: #1d4d2d !important; /* Dark Green */
+    color: white !important;
+}
+
+.btn-dark-green:hover {
+    background-color: #174224 !important;
+    border-color: #12351d !important;
+}
+
+/* Gold Button */
+.btn-gold {
+    background-color: #d4af37 !important; /* Gold */
+    color: white !important;
+}
+
+.btn-gold:hover {
+    background-color: #c49b2d !important;
+    border-color: #a0801a !important;
+}
+
+@media (max-width: 768px) {
+    .why-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+        gap: 30px;
+    }
+
+    .why-buttons {
+        flex-direction: column;
+        gap: 10px; /* Adjust spacing for mobile screens */
+    }
+}
+
+/* Get Inspired Section */
+.get-inspired {
+    background: #fff;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.get-inspired h2 {
+    font-size: 3rem;
+    color: #8B5E3B; /* Brown */
+    font-weight: bold;
+}
+
+.get-inspired .tagline {
+    font-size: 1.2rem;
+    color: #2F4F2F; /* Green */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.get-inspired .description {
+    font-size: 1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.inspiration-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10x; /* Add gap for spacing */
+}
+
+.inspiration-item {
+    display: flex;
+    align-items: center;
+    background: #fff; /* Light background */
+    padding: 20px;
+    border-radius: 10px; /* Add border radius */
+}
+
+.inspiration-item img {
+    width: 40%; /* Smaller width for images */
+    border-radius: 10px;
+}
+
+.inspiration-details {
+    width: 60%; /* Adjust width to fit smaller images */
+    padding: 20px;
+    color: #333; /* Dark text color */
+}
+
+.inspiration-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.inspiration-details p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.ratings {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.ratings i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.fa-tripadvisor, .fa-google {
+    font-size: 20px; /* Minimal size for the icons */
+    margin: 0 5px; /* Better spacing between the icons */
+}
+
+.fa-tripadvisor {
+    color: #06402B; /* Green */
+}
+
+.fa-google {
+    color: #06402B; /* Green */
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #06402B; /* Green */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.read-more:hover {
+    color: #04632B; /* Darker green */
+}
+
+/* Alternate Layout */
+.inspiration-item.right {
+    flex-direction: row;
+}
+
+.inspiration-item.left {
+    flex-direction: row-reverse;
+}
+
+/* Call Our Expert Container */
+.call-expert {
+    background-color: #fafdff;
+    border: 1px solid #06402B;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.call-expert .inspiration-details {
+    background-color: transparent;
+}
+
+.call-expert .inspiration-details h3 {
+    color: #06402B;
+}
+
+.call-expert .inspiration-details p {
+    color: #333;
+}
+
+.call-expert .read-more {
+    background-color: #06402B;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.call-expert .read-more:hover {
+    background-color: #04632B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inspiration-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .inspiration-item img {
+        display: none; /* Hide images on mobile screens */
+    }
+
+    .inspiration-details {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Partners Section */
+.partners {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.partners h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partner-logo {
+    flex: 1 1 calc(20% - 20px);
+    max-width: 150px;
+    margin: 10px;
+}
+
+.partner-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .partner-logo {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #06402B; /* Solid dark background color */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Content Flex */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 180px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1); /* Logo hover effect */
+}
+
+/* Footer Links */
+.footer-links h3 {
+    font-size: 1.3em;
+    color: #FFC107;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+.footer-links a:hover::before {
+    width: 100%;
+}
+
+/* Footer Social Icons */
+.footer-social h3 {
+    font-size: 1.3em;
+    color: #FFC107;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social .social-icon {
+    font-size: 28px;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    color: #FFC107; /* Hover effect color */
+    transform: scale(1.2);
+}
+
+.footer-credits {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-credits a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-credits a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-social .social-icons {
+        gap: 15px;
+    }
+}
