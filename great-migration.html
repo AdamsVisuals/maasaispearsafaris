@@ -14,6 +14,7 @@
     <script defer src="js/menu.js"></script>
     <script defer src="js/sort.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/migration.js"></script>
 </head>
 
 <header class="sticky-header transparent">
@@ -73,94 +74,273 @@
     </ul>
 </div>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>The Great Wildebeest Migration</h1>
-        <p>One of Nature's Most Spectacular Events</p>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Witness Nature's Greatest Spectacle</h1>
+            <p>Premium Wildebeest Migration Safaris in Kenya & Tanzania</p>
+            <a href="#itineraries" class="btn btn-primary">Explore Tours</a>
+            <a href="#book-now" class="btn btn-secondary">Book Now</a>
+        </div>
+    </section>
 
-<nav class="main-nav">
-    <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#route">Migration Route</a></li>
-        <li><a href="#wildlife">Wildlife</a></li>
-        <li><a href="#conservation">Conservation</a></li>
-    </ul>
-</nav>
-
-<main class="container">
-    <section id="overview" class="section">
-        <h2>About the Migration</h2>
-        <div class="content-grid">
-            <div class="text-content">
-                <p>The Great Wildebeest Migration is one of the most impressive natural events on the planet. Each year, over 1.5 million wildebeest, along with hundreds of thousands of zebras and gazelles, make a circular journey through the Serengeti in Tanzania and the Masai Mara in Kenya in search of fresh grazing and water.</p>
-                <p>This continuous, year-round movement is driven by rainfall patterns and the growth of new grass. The migration is a dangerous journey, with many animals falling prey to predators like lions, cheetahs, and crocodiles.</p>
+    <!-- Quick Facts -->
+    <section class="quick-facts">
+        <div class="container">
+            <div class="fact">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Year-Round Tours</h3>
+                <p>Follow the migration through all seasons</p>
             </div>
-            <div class="image-content">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Wildebeest herd migrating" class="responsive-img">
+            <div class="fact">
+                <i class="fas fa-binoculars"></i>
+                <h3>Expert Guides</h3>
+                <p>20+ years migration tracking experience</p>
+            </div>
+            <div class="fact">
+                <i class="fas fa-hotel"></i>
+                <h3>Luxury Camps</h3>
+                <p>Premium accommodation options</p>
+            </div>
+            <div class="fact">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safety First</h3>
+                <p>COVID-safe protocols in place</p>
             </div>
         </div>
     </section>
 
-    <section id="route" class="section">
-        <h2>Migration Route</h2>
-        <div class="content-grid reversed">
-            <div class="text-content">
-                <p>The migration follows a roughly circular route that covers about 1,800 miles each year. The timing varies slightly depending on rainfall patterns, but generally follows this cycle:</p>
-                <ul>
-                    <li><strong>December-April:</strong> Southern Serengeti (calving season)</li>
-                    <li><strong>May-June:</strong> Western corridor (moving north)</li>
-                    <li><strong>July-October:</strong> Masai Mara (Kenya)</li>
-                    <li><strong>November:</strong> Returning to Serengeti</li>
-                </ul>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About the Great Migration</h2>
+                <p>The annual Wildebeest Migration is the largest mammal migration on Earth, with over 1.5 million wildebeest, 400,000 zebra and 200,000 gazelle moving in a continuous cycle through the Serengeti and Masai Mara ecosystems.</p>
+                <p>Our company has specialized in Migration safaris since 2005, with expert guides who know exactly where to position you for the most spectacular wildlife viewing opportunities throughout the year.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Precision Tracking</h4>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-camera"></i>
+                        <h4>Photo Specialists</h4>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-route"></i>
+                        <h4>Private Routes</h4>
+                    </div>
+                </div>
             </div>
-            <div class="image-content">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Migration route map" class="responsive-img">
-            </div>
-        </div>
-    </section>
-
-    <section id="wildlife" class="section">
-        <h2>Wildlife Involved</h2>
-        <div class="wildlife-grid">
-            <div class="wildlife-card">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Wildebeest" class="responsive-img">
-                <h3>Wildebeest</h3>
-                <p>Over 1.5 million blue wildebeest make the journey, forming the majority of migrating animals.</p>
-            </div>
-            <div class="wildlife-card">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Zebra" class="responsive-img">
-                <h3>Zebras</h3>
-                <p>About 200,000 zebras join the migration, often leading the way as they can detect water.</p>
-            </div>
-            <div class="wildlife-card">
-                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Gazelle" class="responsive-img">
-                <h3>Gazelles</h3>
-                <p>Thomson's and Grant's gazelles follow the herds, benefiting from the cleared paths.</p>
+            <div class="about-image">
+                <img src="images/migration-about.jpg" alt="Wildebeest crossing river" class="responsive-img">
             </div>
         </div>
     </section>
 
-    <section id="conservation" class="section">
-        <h2>Conservation Efforts</h2>
-        <p>The Great Migration faces threats from human activities like agriculture, settlements, and infrastructure development. Several organizations work to protect this natural wonder:</p>
-        <div class="conservation-grid">
-            <div class="conservation-point">
-                <h3>Protected Areas</h3>
-                <p>The Serengeti National Park and Masai Mara National Reserve provide safe corridors for the migration.</p>
+    <!-- Itineraries Section -->
+    <section id="itineraries" class="itineraries-section">
+        <div class="container">
+            <h2>Featured Itineraries</h2>
+            <p class="section-subtitle">Choose from our most popular migration safari packages</p>
+            
+            <div class="itinerary-tabs">
+                <button class="tab-button active" data-tab="serengeti">Serengeti</button>
+                <button class="tab-button" data-tab="masai-mara">Masai Mara</button>
+                <button class="tab-button" data-tab="combined">Combined</button>
+                <button class="tab-button" data-tab="luxury">Luxury</button>
             </div>
-            <div class="conservation-point">
-                <h3>Anti-Poaching</h3>
-                <p>Rangers patrol the areas to prevent illegal hunting and protect the wildlife.</p>
-            </div>
-            <div class="conservation-point">
-                <h3>Community Involvement</h3>
-                <p>Local communities are engaged in conservation efforts and benefit from tourism.</p>
+            
+            <div class="itinerary-content">
+                <!-- Serengeti Itinerary -->
+                <div id="serengeti" class="itinerary active">
+                    <div class="itinerary-header">
+                        <h3>Classic Serengeti Migration Safari</h3>
+                        <p class="duration-price">7 Days | From $3,850 per person</p>
+                    </div>
+                    <div class="itinerary-details">
+                        <div class="itinerary-highlights">
+                            <h4>Highlights</h4>
+                            <ul>
+                                <li>River crossing viewing positions</li>
+                                <li>Calving season in Southern Serengeti</li>
+                                <li>3 luxury mobile camp locations</li>
+                                <li>Private safari vehicles</li>
+                            </ul>
+                        </div>
+                        <div class="itinerary-schedule">
+                            <h4>Day-by-Day</h4>
+                            <div class="day">
+                                <h5>Day 1: Arrival Arusha</h5>
+                                <p>Arrive at Kilimanjaro Airport, transfer to lodge for briefing</p>
+                            </div>
+                            <div class="day">
+                                <h5>Day 2: Central Serengeti</h5>
+                                <p>Flight to Seronera, afternoon game drive</p>
+                            </div>
+                            <div class="day">
+                                <h5>Day 3-4: Western Corridor</h5>
+                                <p>Track migration moving north, Grumeti River area</p>
+                            </div>
+                            <div class="day">
+                                <h5>Day 5-6: Northern Serengeti</h5>
+                                <p>Mara River crossing viewpoints</p>
+                            </div>
+                            <div class="day">
+                                <h5>Day 7: Departure</h5>
+                                <p>Morning game drive, flight to Arusha</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#book-now" class="btn btn-itinerary">Book This Tour</a>
+                </div>
+                
+                <!-- Masai Mara Itinerary -->
+                <div id="masai-mara" class="itinerary">
+                    <!-- Similar structure as above -->
+                </div>
+                
+                <!-- Combined Itinerary -->
+                <div id="combined" class="itinerary">
+                    <!-- Similar structure as above -->
+                </div>
+                
+                <!-- Luxury Itinerary -->
+                <div id="luxury" class="itinerary">
+                    <!-- Similar structure as above -->
+                </div>
             </div>
         </div>
     </section>
-</main>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages-section">
+        <div class="container">
+            <h2>Safari Packages</h2>
+            <p class="section-subtitle">Choose the experience that matches your style</p>
+            
+            <div class="package-cards">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Adventure Camping</h3>
+                        <p class="price">From $2,950</p>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Shared safari vehicles</li>
+                            <li>Mobile tented camps</li>
+                            <li>Group tours (max 6)</li>
+                            <li>Great for budget travelers</li>
+                        </ul>
+                        <a href="#book-now" class="btn btn-package">Book Adventure</a>
+                    </div>
+                </div>
+                
+                <div class="package-card featured">
+                    <div class="package-header">
+                        <h3>Classic Safari</h3>
+                        <p class="price">From $4,250</p>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Private safari vehicle</li>
+                            <li>Lodge & tented camp mix</li>
+                            <li>Expert migration guide</li>
+                            <li>Best value option</li>
+                        </ul>
+                        <a href="#book-now" class="btn btn-package">Book Classic</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Luxury Migration</h3>
+                        <p class="price">From $7,800</p>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li>Private vehicle & guide</li>
+                            <li>5-star luxury camps</li>
+                            <li>Helicopter transfers</li>
+                            <li>Photography specialist</li>
+                        </ul>
+                        <a href="#book-now" class="btn btn-package">Book Luxury</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <!-- Testimonial content here -->
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book-now" class="booking-section">
+        <div class="container">
+            <h2>Ready for Your Migration Adventure?</h2>
+            <p class="section-subtitle">Contact us to book your safari or request a custom itinerary</p>
+            
+            <div class="booking-form-container">
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="tour">Tour of Interest</label>
+                        <select id="tour">
+                            <option value="">Select a tour</option>
+                            <option value="serengeti">Serengeti Migration</option>
+                            <option value="mara">Masai Mara</option>
+                            <option value="combined">Combined Safari</option>
+                            <option value="luxury">Luxury Migration</option>
+                            <option value="custom">Custom Itinerary</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dates">Preferred Dates</label>
+                        <input type="text" id="dates" placeholder="MM/DD/YYYY - MM/DD/YYYY">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Special Requests</label>
+                        <textarea id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Request Booking</button>
+                </form>
+                
+                <div class="booking-info">
+                    <h3>Why Book With Us?</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Migration specialists since 2005</li>
+                        <li><i class="fas fa-check-circle"></i> 98% river crossing success rate</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible booking policies</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 in-country support</li>
+                    </ul>
+                    
+                    <div class="contact-details">
+                        <h3>Contact Us Directly</h3>
+                        <p><i class="fas fa-phone"></i> +254 700 123456</p>
+                        <p><i class="fas fa-envelope"></i> bookings@greatmigrationsafaris.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 8am - 8pm EAT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
                 <!-- Footer Section -->
                 <footer class="footer">
