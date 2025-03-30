@@ -16,6 +16,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="stylesheet" href="styles/nationalparks.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="js/header.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/sort.js"></script>
@@ -170,7 +173,7 @@
 <!-- Google Maps Section -->
 <section class="map">
     <h2>Explore the Locations</h2>
-    <div id="map" style="height: 450px;"></div>
+    <div id="map" style="height: 500px;"></div>
 </section>
 
     <!-- Call to Action -->
@@ -255,10 +258,6 @@
         }, 5000);
     </script>
 
-<!-- Leaflet Library for Maps -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <!-- Custom Script for Map -->
 <script>
     $(document).ready(function () {
@@ -281,7 +280,7 @@
 
         parks.forEach(park => {
             L.marker(park.coords).addTo(map)
-                .bindPopup(<b>${park.name}</b>);
+                .bindPopup(`<b>${park.name}</b>`); // Corrected popup syntax
         });
     });
 </script>
