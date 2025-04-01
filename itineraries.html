@@ -16,6 +16,7 @@
     <script defer src="js/header.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/sort.js"></script>
+    <script defer src="js/itineraries.js"></script>
     <script defer src="js/script.js"></script>
 </head>
 
@@ -78,71 +79,236 @@
 
 <body>
     <!-- Hero Section -->
-    <section class="itineraries-hero">
-        <div class="hero-content">
-            <h1>Explore Our Safari Itineraries</h1>
-            <p>Discover the best safari experiences tailored for adventure seekers and wildlife enthusiasts.</p>
-            <a href="booking.html" class="btn">Book Now</a>
+    <header class="page-hero">
+        <div class="hero-overlay">
+            <div class="container">
+                <h1>Our Safari Itineraries</h1>
+                <p class="subtitle">Tailored experiences with Maasai guides</p>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Itineraries Section -->
-    <section class="itineraries">
+    <!-- Main Itineraries Container -->
+    <main class="itineraries-container">
         <div class="container">
-            <h2>Popular Safari Itineraries</h2>
-            <div class="grid">
-                <!-- Itinerary 1 -->
-                <div class="itinerary-item">
-                    <img src="images/trip1.jpg" alt="Serengeti Safari">
-                    <div class="itinerary-content">
-                        <h3>3-Day Serengeti Safari</h3>
-                        <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
-                        <p><strong>Highlights:</strong> Serengeti National Park, Big Five, Great Migration</p>
-                        <a href="3-day-serengeti.html" class="btn">View Details</a>
+            <!-- Filter Controls -->
+            <div class="itinerary-filters">
+                <div class="filter-group">
+                    <label for="duration-filter">Duration:</label>
+                    <select id="duration-filter">
+                        <option value="all">All Durations</option>
+                        <option value="short">1-3 Days</option>
+                        <option value="medium">4-7 Days</option>
+                        <option value="long">8+ Days</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Safari Type:</label>
+                    <select id="type-filter">
+                        <option value="all">All Types</option>
+                        <option value="wildlife">Wildlife Focus</option>
+                        <option value="cultural">Cultural Immersion</option>
+                        <option value="trekking">Trekking Combos</option>
+                        <option value="luxury">Luxury Safaris</option>
+                    </select>
+                </div>
+                <button class="btn btn-filter">Filter Itineraries</button>
+                <button class="btn btn-reset">Reset Filters</button>
+            </div>
+
+            <!-- Itinerary Grid Container -->
+            <div class="itinerary-grid" id="itineraryGrid">
+                <!-- ITINERARY TEMPLATE (you can duplicate this container to add more) -->
+                <div class="itinerary-card" data-duration="medium" data-type="wildlife">
+                    <div class="card-header">
+                        <h3>Classic Serengeti Adventure</h3>
+                        <span class="duration">5 Days / 4 Nights</span>
+                        <span class="safari-type">Wildlife Focus</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Serengeti NP, Ngorongoro</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-users"></i>
+                                <span>Max 6 guests</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-moon"></i>
+                                <span>Lodge & Camping</span>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h4>Experience Highlights</h4>
+                            <ul>
+                                <li>Great Migration viewing</li>
+                                <li>Big Five safari</li>
+                                <li>Maasai village visit</li>
+                                <li>Ngorongoro Crater descent</li>
+                            </ul>
+                            <div class="full-itinerary">
+                                <button class="btn-itinerary-toggle">View Full Itinerary <i class="fas fa-chevron-down"></i></button>
+                                <div class="itinerary-details">
+                                    <div class="day">
+                                        <h5>Day 1: Arrival & Transfer</h5>
+                                        <p>Arrive at Kilimanjaro Airport, transfer to Arusha for overnight at lodge with welcome briefing.</p>
+                                    </div>
+                                    <div class="day">
+                                        <h5>Day 2: Serengeti Plains</h5>
+                                        <p>Morning flight to Serengeti, afternoon game drive with sunset viewing.</p>
+                                    </div>
+                                    <div class="day">
+                                        <h5>Day 3: Full Day Safari</h5>
+                                        <p>Dawn and dusk game drives with Maasai trackers, bush lunch.</p>
+                                    </div>
+                                    <div class="day">
+                                        <h5>Day 4: Ngorongoro Crater</h5>
+                                        <p>Descend into crater for wildlife viewing, afternoon cultural visit.</p>
+                                    </div>
+                                    <div class="day">
+                                        <h5>Day 5: Return</h5>
+                                        <p>Morning nature walk, transfer back to Arusha for departure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price-group">
+                            <span class="from">From</span>
+                            <span class="price">$2,450</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="discovertanzania.html#contact" class="btn btn-small">Enquire Now</a>
+                            <a href="#" class="btn btn-small btn-secondary">PDF Itinerary</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Itinerary 2 -->
-                <div class="itinerary-item">
-                    <img src="images/ngorongoro2.jpg" alt="Ngorongoro Crater Tour">
-                    <div class="itinerary-content">
-                        <h3>5-Day Ngorongoro Crater Tour</h3>
-                        <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-                        <p><strong>Highlights:</strong> Ngorongoro Crater, Tarangire National Park, Lake Manyara</p>
-                        <a href="5-daysafari.html" class="btn">View Details</a>
+                <!-- END ITINERARY TEMPLATE -->
+
+                <!-- Additional itinerary example (duplicate and modify this structure) -->
+                <div class="itinerary-card" data-duration="long" data-type="trekking">
+                    <div class="card-header">
+                        <h3>Kilimanjaro & Wildlife Combo</h3>
+                        <span class="duration">8 Days / 7 Nights</span>
+                        <span class="safari-type">Trekking Adventure</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Kilimanjaro, Tarangire</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-users"></i>
+                                <span>Max 8 guests</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-moon"></i>
+                                <span>Mountain Huts & Lodge</span>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h4>Experience Highlights</h4>
+                            <ul>
+                                <li>Kilimanjaro foothills trek</li>
+                                <li>Wildlife safari in Tarangire</li>
+                                <li>Local market visits</li>
+                                <li>Elephant encounters</li>
+                            </ul>
+                            <div class="full-itinerary">
+                                <button class="btn-itinerary-toggle">View Full Itinerary <i class="fas fa-chevron-down"></i></button>
+                                <div class="itinerary-details">
+                                    <!-- Day-by-day details would go here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price-group">
+                            <span class="from">From</span>
+                            <span class="price">$3,200</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="discovertanzania.html#contact" class="btn btn-small">Enquire Now</a>
+                            <a href="#" class="btn btn-small btn-secondary">PDF Itinerary</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Itinerary 3 -->
-                <div class="itinerary-item">
-                    <img src="images/tarangire1.webp" alt="Tarangire Safari">
-                    <div class="itinerary-content">
-                        <h3>4-Day Tarangire Safari</h3>
-                        <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-                        <p><strong>Highlights:</strong> Tarangire National Park, Elephant Herds, Baobab Trees</p>
-                        <a href="4-day-tarangire.html" class="btn">View Details</a>
+
+                <!-- Cultural Itinerary Example -->
+                <div class="itinerary-card" data-duration="medium" data-type="cultural">
+                    <div class="card-header">
+                        <h3>Maasai Cultural Immersion</h3>
+                        <span class="duration">6 Days / 5 Nights</span>
+                        <span class="safari-type">Cultural Experience</span>
                     </div>
-                </div>
-                <!-- Itinerary 4 -->
-                <div class="itinerary-item">
-                    <img src="images/lake-manyara-national-park-banner.webp" alt="Lake Manyara Safari">
-                    <div class="itinerary-content">
-                        <h3>2-Day Lake Manyara Safari</h3>
-                        <p><strong>Duration:</strong> 2 Days / 1 Night</p>
-                        <p><strong>Highlights:</strong> Lake Manyara National Park, Tree-Climbing Lions, Birdwatching</p>
-                        <a href="2-day-mayara.html" class="btn">View Details</a>
+                    <div class="card-body">
+                        <div class="card-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Maasai Steppe, Serengeti</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-users"></i>
+                                <span>Max 4 guests</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-moon"></i>
+                                <span>Community Lodging</span>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <h4>Experience Highlights</h4>
+                            <ul>
+                                <li>Live with Maasai families</li>
+                                <li>Traditional craft workshops</li>
+                                <li>Guided nature walks</li>
+                                <li>Evening storytelling</li>
+                            </ul>
+                            <div class="full-itinerary">
+                                <button class="btn-itinerary-toggle">View Full Itinerary <i class="fas fa-chevron-down"></i></button>
+                                <div class="itinerary-details">
+                                    <!-- Day-by-day details would go here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price-group">
+                            <span class="from">From</span>
+                            <span class="price">$2,150</span>
+                            <span class="per-person">per person</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="discovertanzania.html#contact" class="btn btn-small">Enquire Now</a>
+                            <a href="#" class="btn btn-small btn-secondary">PDF Itinerary</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready for Your Safari Adventure?</h2>
-            <p>Contact us to customize your itinerary and make your dream safari a reality.</p>
-            <a href="contact.html" class="btn">Get in Touch</a>
+            <!-- Empty State (shown when filters return no results) -->
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-compass"></i>
+                <h3>No Itineraries Match Your Filters</h3>
+                <p>Try adjusting your search criteria or <a href="#" class="reset-link">reset the filters</a></p>
+            </div>
+
+            <!-- Custom Safari CTA -->
+            <div class="custom-safari-cta">
+                <div class="cta-content">
+                    <h3>Don't See Your Perfect Safari?</h3>
+                    <p>Our Maasai guides can create a completely customized itinerary tailored to your interests, timeframe, and budget.</p>
+                    <a href="discovertanzania.html#contact" class="btn">Request Custom Safari</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer Section -->
 <footer class="footer">
