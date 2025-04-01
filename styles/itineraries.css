@@ -333,12 +333,12 @@ body {
 }
 
 .btn-filter {
-    background-color: #4a90e2;
+    background-color: #964b00;
     color: white;
 }
 
 .btn-filter:hover {
-    background-color: #3a7bc8;
+    background-color: #895129;
 }
 
 .btn-reset {
@@ -374,7 +374,7 @@ body {
 }
 
 .card-header {
-    background-color: #2c3e50;
+    background-color: #06402B;
     color: white;
     padding: 20px;
     position: relative;
@@ -420,7 +420,7 @@ body {
 
 .highlight i {
     margin-right: 8px;
-    color: #4a90e2;
+    color: #964b00;
 }
 
 .card-details h4 {
@@ -442,7 +442,7 @@ body {
 .btn-itinerary-toggle {
     background: none;
     border: none;
-    color: #4a90e2;
+    color: #06402B;
     font-weight: 600;
     padding: 5px 0;
     cursor: pointer;
@@ -571,7 +571,7 @@ body {
 }
 
 .reset-link {
-    color: #4a90e2;
+    color: #964b00;
     text-decoration: none;
     font-weight: 600;
 }
@@ -582,7 +582,7 @@ body {
 
 /* Custom Safari CTA */
 .custom-safari-cta {
-    background-color: #2c3e50;
+    background-color: #964b00;
     color: white;
     padding: 40px;
     border-radius: 8px;
@@ -603,14 +603,14 @@ body {
 }
 
 .custom-safari-cta .btn {
-    background-color: #e67e22;
+    background-color: #06402B;
     color: white;
     padding: 12px 30px;
     font-size: 1.1rem;
 }
 
 .custom-safari-cta .btn:hover {
-    background-color: #d35400;
+    background-color: #064620;
 }
 
 /* Responsive Adjustments */
